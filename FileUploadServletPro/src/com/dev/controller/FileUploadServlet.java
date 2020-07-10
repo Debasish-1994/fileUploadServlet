@@ -45,6 +45,7 @@ public class FileUploadServlet extends HttpServlet {
 					if (!item.isFormField()) {
 						String name = new File(item.getName()).getName();
 						item.write(new File(getServletContext().getRealPath("/WEB-INF/file") + File.separator + name));
+						System.out.println(getServletContext().getRealPath("/WEB-INF/file") + File.separator + name);
 					}
 				}
 				// File uploaded successfully
